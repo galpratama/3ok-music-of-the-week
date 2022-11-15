@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+            fontFamily: {
+                sans: ['HelveticaNeue', 'sans-serif'],
+            },
+          backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-black bg-gradient-radial from-[#2d2d2d] to-[#000000]">
+    <div class="flex flex-col justify-center h-screen max-w-sm mx-auto">
+        <!-- Heading -->
+        <div class="text-white text-2xl text-left mb-4 tracking-tighter">
+            Now Playing
+        </div>
+        <!-- iPod -->
+        <div class="p-12 pb-6 bg-white rounded-3xl shadow-lg w-full">
+            <img src="/album-cover.jpeg" alt="" class="w-full shadow-inner rounded-sm">
+            <audio controls class="mt-4">
+                <source src="music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="pt-6">
+                <img src="/vinyl.png" alt="" class="w-24 mx-auto animate-spin">
+            </div>
+        </div>
+        <!-- Music Information -->
+        <div class="text-white text-right mt-4 tracking-tighter">
+            <div class="text-5xl">INDAHKUS</div>
+            <div class="text-2xl">Endless Loop</div>
+        </div>
+    </div>
+
+    <!-- Decoration -->
+    <img src="/rectangle.png" alt="" class="fixed -right-40 -top-60 w-96 shadow-2xl">
+    <img src="/rectangle.png" alt="" class="fixed -bottom-48 -left-[30rem] w-[28rem] shadow-2xl translate-x-2/4">
+    <img src="/logo.png" alt="" class="fixed left-12 top-12 w-36">
+    <img src="/motw.png" alt="" class="fixed bottom-12 right-12 w-36">
+</body>
+</html>
